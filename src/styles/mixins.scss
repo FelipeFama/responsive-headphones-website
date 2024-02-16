@@ -1,0 +1,24 @@
+/*=============== MIXINS ===============*/
+@use "variables";
+
+@mixin container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+@mixin grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin section {
+  padding-block: 5rem 1rem;
+}
+
+@mixin section-title {
+  font-size: variables.$h2-font-size;
+}
+
+@mixin main {
+  overflow: hidden;
+}

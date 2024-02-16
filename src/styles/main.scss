@@ -1,0 +1,66 @@
+@use "variables";
+@use "mixins";
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: variables.$body-font;
+  font-size: variables.$normal-font-size;
+  background-color: variables.$body-color;
+  color: variables.$text-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: variables.$white-color;
+  font-weight: variables.$font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  @include mixins.container;
+}
+
+.grid {
+  @include mixins.grid;
+}
+
+.section {
+  @include mixins.section;
+}
+
+.section-title {
+  @include mixins.section-title;
+}
+
+.main {
+  @include mixins.main;
+}
