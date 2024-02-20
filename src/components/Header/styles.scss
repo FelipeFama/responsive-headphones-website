@@ -12,6 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (min-width: 1150px) {
+      height: calc(variables.$header-height + 2rem);
+    }
     & .nav__logo {
       font-size: variables.$h2-font-size;
       font-weight: variables.$font-semi-bold;
@@ -23,6 +26,9 @@
       font-size: 1.5rem;
       color: variables.$white-color;
       cursor: pointer;
+      @media screen and (min-width: 1150px) {
+        display: none;
+      }
     }
 
     /* Navigation for mobile devices */
@@ -44,6 +50,10 @@
       display: flex;
       flex-direction: column;
       row-gap: 2.5rem;
+      @media screen and (min-width: 1150px) {
+        flex-direction: row;
+        column-gap: 4.5rem;
+      }
     }
     & .nav__link {
       color: variables.$white-color;
