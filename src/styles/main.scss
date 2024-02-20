@@ -64,3 +64,7 @@ img {
 .main {
   @include mixins.main;
 }
+
+.button {
+  @include mixins.buttons;
+}

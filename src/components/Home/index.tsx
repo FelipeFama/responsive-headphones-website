@@ -1,6 +1,13 @@
 import React from "react";
 
 import "./styles.scss";
+import {
+  RiFacebookCircleFill,
+  RiInstagramFill,
+  RiLinkedinBoxFill,
+  RiPlayCircleLine,
+} from "react-icons/ri";
+
 import { assetsProject } from "../../utils/data";
 
 export default function Home() {
@@ -27,8 +34,38 @@ export default function Home() {
             <span className="home__tooltip-text">$150</span>
           </figure>
         </article>
-
-        <article className="home__social"></article>
+        <a href="#" className="home__button button">
+          Buy Now <RiPlayCircleLine />
+        </a>
+        <article className="home__social">
+          <span className="home__social-text">Follow us</span>
+          <aside className="home__social-links">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              className="home__social-link"
+              rel="noreferrer"
+            >
+              <RiFacebookCircleFill />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              className="home__social-link"
+              rel="noreferrer"
+            >
+              <RiInstagramFill />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              className="home__social-link"
+              rel="noreferrer"
+            >
+              <RiLinkedinBoxFill />
+            </a>
+          </aside>
+        </article>
       </div>
     </section>
   );
