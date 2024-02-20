@@ -17,5 +17,34 @@
       font-weight: variables.$font-semi-bold;
       color: variables.$first-color;
     }
+
+    /* Navigation for mobile devices */
+    @media screen and (max-width: 1150px) {
+      & .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: hsla(23, 12%, 4%, 0.2);
+        width: 100%;
+        padding-block: 5.5rem 4.5rem;
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
+        transition: top 0.4s;
+      }
+    }
+    & .nav__list {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+    }
+    & .nav__link {
+      color: variables.$white-color;
+      font-weight: variables.$font-medium;
+      transition: color 0.4s;
+      &:hover {
+        color: variables.$first-color;
+      }
+    }
   }
 }

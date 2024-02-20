@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 
 export default function Header() {
   return (
@@ -31,6 +32,15 @@ export default function Header() {
               </a>
             </li>
           </ul>
+          {/* Close button */}
+          <div className="nav__close" id="nav-close">
+            <RiCloseLine />
+          </div>
+        </div>
+
+        {/* Toggle button */}
+        <div className="nav__toggle" id="nav-toggle">
+          <RiMenuLine />
         </div>
       </nav>
     </header>
