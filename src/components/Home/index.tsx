@@ -5,7 +5,7 @@ import {
   RiFacebookCircleFill,
   RiInstagramFill,
   RiLinkedinBoxFill,
-  RiPlayCircleLine,
+  RiPlayCircleFill,
 } from "react-icons/ri";
 
 import { assetsProject } from "../../utils/data";
@@ -35,7 +35,7 @@ export default function Home() {
           </figure>
         </article>
         <a href="#" className="home__button button">
-          Buy Now <RiPlayCircleLine />
+          Buy Now <RiPlayCircleFill />
         </a>
         <article className="home__social">
           <span className="home__social-text">Follow us</span>
