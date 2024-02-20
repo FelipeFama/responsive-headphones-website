@@ -17,6 +17,13 @@
       font-weight: variables.$font-semi-bold;
       color: variables.$first-color;
     }
+    & .nav__toggle,
+    & .nav__close {
+      display: flex;
+      font-size: 1.5rem;
+      color: variables.$white-color;
+      cursor: pointer;
+    }
 
     /* Navigation for mobile devices */
     @media screen and (max-width: 1150px) {
@@ -45,6 +52,14 @@
       &:hover {
         color: variables.$first-color;
       }
+    }
+    & .nav__close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+    }
+    & .show-menu {
+      top: 0;
     }
   }
 }
