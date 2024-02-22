@@ -9,7 +9,7 @@ export default function About() {
     <section className="about section" id="about">
       <div className="about__container container grid">
         <article className="about__data">
-          <div className="section__title">MORE ABOUT US</div>
+          <aside className="section__title">MORE ABOUT US</aside>
           <p className="about__description">
             Enjoy award-winning JBL sound with wireless listening freedom and a
             sleek, streamlined design with comfortable cushioned earcups that
