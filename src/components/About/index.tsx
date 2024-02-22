@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.scss";
 import { BiSolidInfoCircle } from "react-icons/bi";
 
+import { assetsProject } from "../../utils/data";
+
 export default function About() {
   return (
     <section className="about section" id="about">
@@ -17,6 +19,12 @@ export default function About() {
             Know More <BiSolidInfoCircle />
           </a>
         </article>
+
+        <img
+          src={assetsProject.about.img.source}
+          alt={assetsProject.about.img.alt}
+          className="about__img"
+        />
       </div>
     </section>
   );
