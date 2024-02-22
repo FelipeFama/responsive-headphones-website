@@ -1,3 +1,4 @@
+import aboutImg from "../../public/img/about-img.png";
 import homeImg from "../../public/img/home-img.png";
 import toolTipImg from "../../public/img/tooltip-right.svg";
 
@@ -12,6 +13,12 @@ export const assetsProject = {
         source: toolTipImg,
         alt: "image",
       },
+    },
+  },
+  about: {
+    img: {
+      source: aboutImg,
+      alt: "image",
     },
   },
 };

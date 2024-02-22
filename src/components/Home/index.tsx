@@ -1,12 +1,13 @@
 import React from "react";
 
 import "./styles.scss";
+
 import {
-  RiFacebookCircleFill,
-  RiInstagramFill,
-  RiLinkedinBoxFill,
-  RiPlayCircleFill,
-} from "react-icons/ri";
+  BiLogoFacebookCircle,
+  BiLogoInstagramAlt,
+  BiLogoLinkedinSquare,
+  BiPlayCircle,
+} from "react-icons/bi";
 
 import { assetsProject } from "../../utils/data";
 
@@ -35,7 +36,7 @@ export default function Home() {
           </figure>
         </article>
         <a href="#" className="home__button button">
-          Buy Now <RiPlayCircleFill />
+          Buy Now <BiPlayCircle />
         </a>
         <article className="home__social">
           <span className="home__social-text">Follow us</span>
@@ -46,7 +47,7 @@ export default function Home() {
               className="home__social-link"
               rel="noreferrer"
             >
-              <RiFacebookCircleFill />
+              <BiLogoFacebookCircle />
             </a>
             <a
               href="https://www.instagram.com"
@@ -54,7 +55,7 @@ export default function Home() {
               className="home__social-link"
               rel="noreferrer"
             >
-              <RiInstagramFill />
+              <BiLogoInstagramAlt />
             </a>
             <a
               href="https://www.linkedin.com"
@@ -62,7 +63,7 @@ export default function Home() {
               className="home__social-link"
               rel="noreferrer"
             >
-              <RiLinkedinBoxFill />
+              <BiLogoLinkedinSquare />
             </a>
           </aside>
         </article>
