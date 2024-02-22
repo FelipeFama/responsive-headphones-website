@@ -1,0 +1,25 @@
+@use "../../styles/variables.scss";
+
+.favorite__container {
+  padding-top: 2rem;
+  & .favorite__article {
+    width: 220px;
+    display: grid;
+    justify-items: center;
+    filter: blur(8px);
+    scale: 0.8;
+    transition:
+      filter 0.3s,
+      scale 0.3s;
+    & .favorite__img {
+      width: 220px;
+      margin-bottom: 1.5rem;
+    }
+    & .favorite__model {
+      background: variables.$gradient-color;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4rem;
+      color: variables.$white-color;
+    }
+  }
+}
