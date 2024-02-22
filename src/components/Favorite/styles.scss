@@ -22,4 +22,10 @@
       color: variables.$white-color;
     }
   }
+  /* Swiper class */
+  & .swiper-slide-active,
+  & .swiper-slide-duplicate-active {
+    filter: blur(0);
+    scale: 1;
+  }
 }

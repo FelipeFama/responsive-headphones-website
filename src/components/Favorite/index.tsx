@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./styles.scss";
+
+import Swiper from "swiper/bundle";
+
 import { assetsProject } from "../../utils/data";
+import "swiper/css/bundle";
 
 export default function Favorite() {
+  useEffect(() => {
+    const swiperFavorite = new Swiper(".favorite__swiper", {
+      loop: true,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      grabCursor: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+      },
+    });
+    return () => {
+      swiperFavorite.destroy();
+    };
+  }, []);
+
   return (
     <section className="favorite section" id="favorite">
       <h2 className="section__title">CHOOSE YOUR FAVORITE</h2>
