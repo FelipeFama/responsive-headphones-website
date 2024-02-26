@@ -1,0 +1,14 @@
+.sponsor__container {
+  padding-bottom: 0.5rem;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 5rem 4rem !important;
+  & .sponsor__img {
+    width: 100px;
+    transition: transform 0.4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
