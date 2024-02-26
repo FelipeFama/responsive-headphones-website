@@ -1,13 +1,12 @@
 import React from "react";
-import "./styles.scss";
 import {
   BiLogoFacebookCircle,
   BiLogoInstagramAlt,
   BiLogoLinkedinSquare,
   BiPlayCircle,
 } from "react-icons/bi";
-
 import { assetsProject } from "../../utils/data";
+import "./styles.scss";
 
 export default function Home() {
   return (

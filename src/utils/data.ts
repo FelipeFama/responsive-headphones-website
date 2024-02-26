@@ -4,6 +4,7 @@ import favoriteTwoImg from "../../public/img/favorite-2.png";
 import favoriteThreeImg from "../../public/img/favorite-3.png";
 import favoriteFourImg from "../../public/img/favorite-4.png";
 import homeImg from "../../public/img/home-img.png";
+import modelImg from "../../public/img/model-img.png";
 import toolTipImg from "../../public/img/tooltip-right.svg";
 
 export const assetsProject = {
@@ -41,6 +42,12 @@ export const assetsProject = {
     favoriteFourImage: {
       source: favoriteFourImg,
       alt: "favorite",
+    },
+  },
+  model: {
+    modelImage: {
+      source: modelImg,
+      alt: "image",
     },
   },
 };

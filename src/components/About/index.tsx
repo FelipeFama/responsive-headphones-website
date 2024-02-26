@@ -1,8 +1,7 @@
 import React from "react";
-import "./styles.scss";
-import { BiSolidInfoCircle } from "react-icons/bi";
-
 import { assetsProject } from "../../utils/data";
+import { BiSolidInfoCircle } from "react-icons/bi";
+import "./styles.scss";
 
 export default function About() {
   return (

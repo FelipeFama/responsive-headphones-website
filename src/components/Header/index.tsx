@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./styles.scss";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
+import "./styles.scss";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

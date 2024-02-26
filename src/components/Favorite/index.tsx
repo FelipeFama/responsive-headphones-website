@@ -1,27 +1,26 @@
 import React, { useEffect } from "react";
-
-import "./styles.scss";
-
-import Swiper from "swiper/bundle";
-
 import { assetsProject } from "../../utils/data";
+import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
+import "./styles.scss";
 
 export default function Favorite() {
   useEffect(() => {
-    const swiperFavorite = new Swiper(".favorite__swiper", {
-      loop: true,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      grabCursor: true,
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
+    window.onload = () => {
+      const swiperFavorite = new Swiper(".favorite__swiper", {
+        loop: true,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        grabCursor: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          },
         },
-      },
-    });
-    return () => {
-      swiperFavorite.destroy();
+      });
+      return () => {
+        swiperFavorite.destroy();
+      };
     };
   }, []);
 
