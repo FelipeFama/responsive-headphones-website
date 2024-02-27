@@ -20,4 +20,7 @@
   &.show-scroll {
     bottom: 3rem;
   }
+  @media screen and (min-width: 1150px) {
+    right: 3rem;
+  }
 }

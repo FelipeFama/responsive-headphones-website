@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
   gap: 5rem 4rem !important;
+  @media screen and (min-width: 1150px) {
+    column-gap: 7.5rem !important;
+    padding-bottom: 6rem;
+  }
   & .sponsor__img {
     width: 100px;
     transition: transform 0.4s;
