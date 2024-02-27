@@ -33,12 +33,11 @@ $z-tooltip: 10;
 $z-fixed: 100;
 
 /*========== Responsive typography ==========*/
-@media screen and (min-width: 1150px) {
-  $biggest-font-size: 25rem;
-  $h1-font-size: 2.25rem;
-  $h2-font-size: 1.5rem;
-  $h3-font-size: 1.25rem;
-  $normal-font-size: 1rem;
-  $small-font-size: 0.875rem;
-  $smaller-font-size: 0.813rem;
-}
+
+$biggest-font-size-lg: 25rem;
+$h1-font-size-lg: 2.25rem;
+$h2-font-size-lg: 1.5rem;
+$h3-font-size-lg: 1.25rem;
+$normal-font-size-lg: 1rem;
+$small-font-size-lg: 0.875rem;
+$smaller-font-size-lg: 0.813rem;
