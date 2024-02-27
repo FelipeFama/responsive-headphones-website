@@ -3,8 +3,8 @@ import {
   BiLogoFacebookCircle,
   BiLogoInstagramAlt,
   BiLogoLinkedinSquare,
-  BiPlayCircle,
 } from "react-icons/bi";
+import { RiPlayCircleFill } from "react-icons/ri";
 import { assetsProject } from "../../utils/data";
 import "./styles.scss";
 
@@ -33,7 +33,7 @@ export default function Home() {
           </figure>
         </article>
         <a href="#" className="home__button button">
-          Buy Now <BiPlayCircle />
+          Buy Now <RiPlayCircleFill />
         </a>
         <article className="home__social">
           <span className="home__social-text">Follow us</span>

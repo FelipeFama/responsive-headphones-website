@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { assetsProject } from "../../utils/data";
-import { BiPlayCircle } from "react-icons/bi";
+import { RiPlayCircleFill } from "react-icons/ri";
 
 export default function Model() {
   return (
@@ -48,7 +48,7 @@ export default function Model() {
           </aside>
         </article>
         <a href="#" className="model__button button">
-          Buy Now <BiPlayCircle />
+          Buy Now <RiPlayCircleFill />
         </a>
       </div>
     </section>
