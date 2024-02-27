@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .favorite__container {
   padding-top: 2rem;
@@ -23,10 +23,10 @@
       }
     }
     & .favorite__model {
-      background: variables.$gradient-color;
+      background: $gradient-color;
       padding: 0.5rem 1.5rem;
       border-radius: 4rem;
-      color: variables.$white-color;
+      color: $white-color;
     }
   }
   /* Swiper class */

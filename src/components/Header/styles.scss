@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .header {
   position: fixed;
@@ -6,25 +6,25 @@
   background-color: transparent;
   top: 0;
   left: 0;
-  z-index: variables.$z-fixed;
+  z-index: $z-fixed;
   & .nav {
-    height: variables.$header-height;
+    height: $header-height;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @media screen and (min-width: 1150px) {
-      height: calc(variables.$header-height + 2rem);
+      height: calc($header-height + 2rem);
     }
     & .nav__logo {
-      font-size: variables.$h2-font-size;
-      font-weight: variables.$font-semi-bold;
-      color: variables.$first-color;
+      font-size: $h2-font-size;
+      font-weight: $font-semi-bold;
+      color: $first-color;
     }
     & .nav__toggle,
     & .nav__close {
       display: flex;
       font-size: 1.5rem;
-      color: variables.$white-color;
+      color: $white-color;
       cursor: pointer;
       @media screen and (min-width: 1150px) {
         display: none;
@@ -56,14 +56,14 @@
       }
     }
     & .nav__link {
-      color: variables.$white-color;
-      font-weight: variables.$font-medium;
+      color: $white-color;
+      font-weight: $font-medium;
       transition: color 0.4s;
       &:hover {
-        color: variables.$first-color;
+        color: $first-color;
       }
       &.active-link {
-        color: variables.$first-color;
+        color: $first-color;
       }
     }
     & .nav__close {
