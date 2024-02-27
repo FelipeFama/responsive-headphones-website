@@ -1,5 +1,5 @@
-@use "variables";
 @use "mixins";
+@import "variables";
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
@@ -16,18 +16,18 @@ html {
 }
 
 body {
-  font-family: variables.$body-font;
-  font-size: variables.$normal-font-size;
-  background-color: variables.$body-color;
-  color: variables.$text-color;
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  background-color: $body-color;
+  color: $text-color;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: variables.$white-color;
-  font-weight: variables.$font-semi-bold;
+  color: $white-color;
+  font-weight: $font-semi-bold;
 }
 
 ul {

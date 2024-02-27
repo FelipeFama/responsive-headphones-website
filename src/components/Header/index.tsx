@@ -29,7 +29,7 @@ export default function Header() {
       const sectionTop = (current as HTMLElement).offsetTop - 58;
       const sectionId = (current as HTMLElement).getAttribute("id");
       const sectionsClass = document.querySelector(
-        ".nav__menu a[href*=" + sectionId + "]",
+        `.nav__menu a[href*=${sectionId}]`,
       );
 
       if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
@@ -47,10 +47,6 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollHeader);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollHeader);
-    };
   }, []);
 
   return (
@@ -70,17 +66,17 @@ export default function Header() {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#about" className="nav__link active-link">
+              <a href="#about" className="nav__link">
                 About
               </a>
             </li>
             <li className="nav__item">
-              <a href="#favorite" className="nav__link active-link">
+              <a href="#favorite" className="nav__link">
                 Favorite
               </a>
             </li>
             <li className="nav__item">
-              <a href="#model" className="nav__link active-link">
+              <a href="#model" className="nav__link">
                 Models
               </a>
             </li>

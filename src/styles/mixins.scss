@@ -1,5 +1,5 @@
 /*=============== MIXINS ===============*/
-@use "variables";
+@import "variables";
 
 @mixin container {
   max-width: 1120px;
@@ -16,12 +16,18 @@
 
 @mixin section {
   padding-block: 5rem 1rem;
+  @media screen and (min-width: 1150px) {
+    padding-block: 7rem 2rem;
+  }
 }
 
 @mixin section-title {
-  font-size: variables.$h2-font-size;
+  font-size: $h2-font-size;
   text-align: center;
   margin-bottom: 1.5rem;
+  @media screen and (min-width: 1150px) {
+    font-size: $h1-font-size;
+  }
 }
 
 @mixin main {
@@ -29,11 +35,11 @@
 }
 
 @mixin buttons {
-  background: variables.$gradient-color;
+  background: $gradient-color;
   padding: 0.75rem 1.5rem;
   border-radius: 4rem;
-  color: variables.$white-color;
-  font-weight: variables.$font-semi-bold;
+  color: $white-color;
+  font-weight: $font-semi-bold;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +48,7 @@
   & svg {
     font-size: 2rem;
     font-weight: initial;
-    color: variables.$first-color;
+    color: $first-color;
   }
   &:hover {
     box-shadow: 0 12px 32px hsla(23, 100%, 50%, 0.12);

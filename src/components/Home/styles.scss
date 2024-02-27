@@ -1,24 +1,35 @@
-@use "../../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .home__container {
   position: relative;
   padding-block: 7rem 1rem;
   row-gap: 2.5rem !important;
+  @media screen and (min-width: 1150px) {
+    position: relative;
+  }
   & .home__content {
     position: relative;
     display: grid;
     justify-self: center;
     & .home__img {
       width: 220px;
+      @media screen and (min-width: 1150px) {
+        width: 500px;
+      }
     }
     & .home__title {
-      font-size: variables.$biggest-font-size;
+      font-size: $biggest-font-size;
       display: flex;
       column-gap: 0.25rem;
-      color: variables.$first-color;
+      color: $first-color;
       position: absolute;
       top: -2rem;
       justify-self: center;
+      @media screen and (min-width: 1150px) {
+        font-size: $biggest-font-size;
+        top: -6.5rem;
+        column-gap: 1rem;
+      }
       & span:nth-child(2) {
         z-index: -1;
       }
@@ -31,12 +42,12 @@
         width: 60px;
       }
       & .home__tooltip-text {
-        background: variables.$gradient-color;
+        background: $gradient-color;
         padding: 0.25rem 0.75rem;
-        color: variables.$white-color;
-        font-weight: variables.$font-medium;
+        color: $white-color;
+        font-weight: $font-medium;
         border-radius: 4rem;
-        font-size: variables.$small-font-size;
+        font-size: $small-font-size;
         position: absolute;
         transform: translate(60px, -40px);
         white-space: nowrap;
@@ -53,13 +64,13 @@
     & .home__social-text {
       position: relative;
       rotate: 90deg;
-      font-size: variables.$small-font-size;
-      font-weight: variables.$font-medium;
+      font-size: $small-font-size;
+      font-weight: $font-medium;
       &::after {
         content: "";
         width: 48px;
         height: 1px;
-        background-color: variables.$text-color;
+        background-color: $text-color;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -72,10 +83,10 @@
       row-gap: 0.75rem;
       & .home__social-link {
         font-size: 1.25rem;
-        color: variables.$text-color;
+        color: $text-color;
         transition: color 0.4s;
         &:hover {
-          color: variables.$first-color;
+          color: $first-color;
         }
       }
     }
