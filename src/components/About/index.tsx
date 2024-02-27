@@ -1,4 +1,3 @@
-import React from "react";
 import { assetsProject } from "../../utils/data";
 import { BiSolidInfoCircle } from "react-icons/bi";
 import "./styles.scss";

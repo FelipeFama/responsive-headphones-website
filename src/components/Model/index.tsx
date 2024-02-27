@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles.scss";
 import { assetsProject } from "../../utils/data";
 import { RiPlayCircleFill } from "react-icons/ri";

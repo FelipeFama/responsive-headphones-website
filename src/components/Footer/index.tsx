@@ -1,4 +1,3 @@
-import React from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
 import {
   BiLogoFacebookCircle,

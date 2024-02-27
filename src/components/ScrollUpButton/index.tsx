@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { BiChevronUp } from "react-icons/bi";
 import "./styles.scss";
 
