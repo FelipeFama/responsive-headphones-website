@@ -3,9 +3,9 @@ import { BiChevronUp } from "react-icons/bi";
 import "./styles.scss";
 
 export default function ScrollUpButton() {
-  const scrollUpBtn = document.getElementById("scroll-up");
-
   const scrollUp = () => {
+    const scrollUpBtn = document.getElementById("scroll-up");
+
     window.scrollY >= 350
       ? scrollUpBtn?.classList.add("show-scroll")
       : scrollUpBtn?.classList.remove("show-scroll");
