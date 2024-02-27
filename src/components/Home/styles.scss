@@ -38,8 +38,14 @@
       position: absolute;
       top: -0.5rem;
       right: 1.5rem;
+      @media screen and (min-width: 1150px) {
+        right: 6rem;
+      }
       & .home__tooltip-img {
         width: 60px;
+        @media screen and (min-width: 1150px) {
+          width: initial;
+        }
       }
       & .home__tooltip-text {
         background: $gradient-color;
@@ -51,6 +57,10 @@
         position: absolute;
         transform: translate(60px, -40px);
         white-space: nowrap;
+        @media screen and (min-width: 1150px) {
+          font-size: $normal-font-size-lg;
+          transform: translate(82px, -52px);
+        }
       }
     }
   }
@@ -66,6 +76,9 @@
       rotate: 90deg;
       font-size: $small-font-size;
       font-weight: $font-medium;
+      @media screen and (min-width: 1150px) {
+        font-size: $small-font-size-lg;
+      }
       &::after {
         content: "";
         width: 48px;
@@ -81,10 +94,16 @@
     & .home__social-links {
       display: grid;
       row-gap: 0.75rem;
+      @media screen and (min-width: 1150px) {
+        row-gap: 1rem;
+      }
       & .home__social-link {
         font-size: 1.25rem;
         color: $text-color;
         transition: color 0.4s;
+        @media screen and (min-width: 1150px) {
+          font-size: 1.5rem;
+        }
         &:hover {
           color: $first-color;
         }
@@ -93,5 +112,9 @@
   }
   & .home__button {
     justify-self: center;
+    @media screen and (min-width: 1150px) {
+      position: absolute;
+      bottom: 4.5rem;
+    }
   }
 }

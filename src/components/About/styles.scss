@@ -1,13 +1,30 @@
 .about__container {
-  row-gap: 3.5rem;
+  row-gap: 3.5rem !important;
+  @media screen and (min-width: 1150px) {
+    grid-template-columns: 400px 500px;
+    align-items: center;
+    column-gap: 5rem !important;
+  }
   & .about__data {
     text-align: center;
+    @media screen and (min-width: 1150px) {
+      text-align: initial;
+      & .section__title {
+        text-align: initial;
+      }
+    }
     & .about__description {
       margin-bottom: 2.5rem;
+      @media screen and (min-width: 1150px) {
+        margin-bottom: 3.5rem;
+      }
     }
   }
   & .about__img {
     width: 280px;
     justify-self: center;
+    @media screen and (min-width: 1150px) {
+      width: 500px;
+    }
   }
 }

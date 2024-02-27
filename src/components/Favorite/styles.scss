@@ -2,6 +2,10 @@
 
 .favorite__container {
   padding-top: 2rem;
+  @media screen and (min-width: 1150px) {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
   & .favorite__article {
     width: 220px;
     display: grid;
@@ -14,6 +18,9 @@
     & .favorite__img {
       width: 220px;
       margin-bottom: 1.5rem;
+      @media screen and (min-width: 1150px) {
+        width: 500px;
+      }
     }
     & .favorite__model {
       background: variables.$gradient-color;

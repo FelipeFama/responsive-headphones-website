@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .model__container {
   padding-top: 2rem;
@@ -8,24 +8,45 @@
     justify-self: center;
     & .model__img {
       width: 280px;
+      @media screen and (min-width: 1150px) {
+        width: 500px;
+      }
     }
     & .model__tooltip {
       position: absolute;
       &.model__tooltip-1 {
         top: 5.5rem;
         left: 5rem;
+        @media screen and (min-width: 1150px) {
+          top: 7.5rem;
+          left: 8.5rem;
+        }
       }
       &.model__tooltip-2 {
         top: 1rem;
         right: 1.5rem;
+        @media screen and (min-width: 1150px) {
+          transform: initial !important;
+          top: 6.5rem;
+          right: -1.5rem;
+        }
       }
       &.model__tooltip-3 {
         bottom: 1.8rem;
         left: 3.5rem;
+        @media screen and (min-width: 1150px) {
+          transform: scaleX(-1);
+          left: 0;
+          bottom: 6rem;
+        }
       }
       &.model__tooltip-4 {
         bottom: 7rem;
         right: 5rem;
+        @media screen and (min-width: 1150px) {
+          bottom: 10rem;
+          right: 7rem;
+        }
       }
       &.model__tooltip-1,
       &.model__tooltip-2 {
@@ -35,19 +56,42 @@
       &.model__tooltip-2 .model__tooltip-text {
         transform: translate(60px, -40px) scaleX(-1);
       }
+      @media screen and (min-width: 1150px) {
+        &.model__tooltip-1 .model__tooltip-text {
+          transform: translate(82px, -56px) scaleX(-1);
+        }
+      }
+      @media screen and (min-width: 1150px) {
+        &.model__tooltip-2 .model__tooltip-text {
+          transform: translate(82px, -56px);
+        }
+      }
+      @media screen and (min-width: 1150px) {
+        &.model__tooltip-3 .model__tooltip-text {
+          transform: translate(82px, -56px) scaleX(-1);
+        }
+      }
       & .model__tooltip-img {
         width: 60px;
+        @media screen and (min-width: 1150px) {
+          width: initial;
+        }
       }
       & .model__tooltip-text {
-        background: variables.$gradient-color;
+        background: $gradient-color;
         padding: 0.25rem 0.75rem;
         border-radius: 4rem;
-        color: variables.$white-color;
-        font-size: variables.$small-font-size;
-        font-weight: variables.$font-medium;
+        color: $white-color;
+        font-size: $small-font-size;
+        font-weight: $font-medium;
         position: absolute;
         transform: translate(60px, -40px);
         white-space: nowrap;
+        @media screen and (min-width: 1150px) {
+          font-size: $normal-font-size-lg;
+          padding: 0.5rem 1.25rem;
+          transform: translate(82px, -56px);
+        }
       }
     }
   }
