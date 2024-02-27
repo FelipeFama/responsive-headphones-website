@@ -13,11 +13,14 @@
     justify-self: center;
     & .home__img {
       width: 220px;
-      @media screen and (min-width: 1150px) {
-        width: 500px;
+      @media screen and (min-width: 340px) {
+        width: 180px;
       }
       @media screen and (min-width: 768px) {
         width: 320px;
+      }
+      @media screen and (min-width: 1150px) {
+        width: 500px;
       }
     }
     & .home__title {
@@ -28,6 +31,9 @@
       position: absolute;
       top: -2rem;
       justify-self: center;
+      @media screen and (min-width: 340px) {
+        font-size: 8rem;
+      }
       @media screen and (min-width: 768px) {
         font-size: 16rem;
         top: -4rem;

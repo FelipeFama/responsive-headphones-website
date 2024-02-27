@@ -4,6 +4,9 @@
 @mixin container {
   max-width: 1120px;
   margin-inline: 1.5rem;
+  @media screen and (max-width: 340px) {
+    margin-inline: 1rem;
+  }
   @media screen and (min-width: 1150px) {
     margin-inline: auto;
   }

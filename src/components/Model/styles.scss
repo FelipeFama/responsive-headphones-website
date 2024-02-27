@@ -8,6 +8,9 @@
     justify-self: center;
     & .model__img {
       width: 280px;
+      @media screen and (min-width: 340px) {
+        width: 220px;
+      }
       @media screen and (min-width: 1150px) {
         width: 500px;
       }
@@ -17,6 +20,10 @@
       &.model__tooltip-1 {
         top: 5.5rem;
         left: 5rem;
+        @media screen and (min-width: 340px) {
+          top: 3rem;
+          left: 4rem;
+        }
         @media screen and (min-width: 1150px) {
           top: 7.5rem;
           left: 8.5rem;
@@ -25,6 +32,9 @@
       &.model__tooltip-2 {
         top: 1rem;
         right: 1.5rem;
+        @media screen and (min-width: 340px) {
+          top: 0;
+        }
         @media screen and (min-width: 1150px) {
           transform: initial !important;
           top: 6.5rem;
@@ -34,6 +44,10 @@
       &.model__tooltip-3 {
         bottom: 1.8rem;
         left: 3.5rem;
+        @media screen and (min-width: 340px) {
+          bottom: 2rem;
+          left: 3rem;
+        }
         @media screen and (min-width: 1150px) {
           transform: scaleX(-1);
           left: 0;
@@ -43,6 +57,10 @@
       &.model__tooltip-4 {
         bottom: 7rem;
         right: 5rem;
+        @media screen and (min-width: 340px) {
+          right: 4rem;
+          bottom: 6rem;
+        }
         @media screen and (min-width: 1150px) {
           bottom: 10rem;
           right: 7rem;
@@ -55,6 +73,9 @@
       &.model__tooltip-1 .model__tooltip-text,
       &.model__tooltip-2 .model__tooltip-text {
         transform: translate(60px, -40px) scaleX(-1);
+        @media screen and (min-width: 340px) {
+          transform: translate(40px, -40px) scaleX(-1);
+        }
       }
       @media screen and (min-width: 1150px) {
         &.model__tooltip-1 .model__tooltip-text {
@@ -87,6 +108,10 @@
         position: absolute;
         transform: translate(60px, -40px);
         white-space: nowrap;
+        @media screen and (min-width: 340px) {
+          font-size: $smaller-font-size;
+          transform: translate(42px, -40px);
+        }
         @media screen and (min-width: 1150px) {
           font-size: $normal-font-size-lg;
           padding: 0.5rem 1.25rem;

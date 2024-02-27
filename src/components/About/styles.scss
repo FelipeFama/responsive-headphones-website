@@ -1,5 +1,9 @@
 .about__container {
   row-gap: 3.5rem !important;
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
   @media screen and (min-width: 1150px) {
     grid-template-columns: 400px 500px;
     align-items: center;
