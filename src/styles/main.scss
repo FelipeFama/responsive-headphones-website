@@ -44,6 +44,21 @@ img {
   height: auto;
 }
 
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(23, 4%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(23, 4%, 30%);
+  &:hover {
+    background-color: hsl(23, 4%, 40%);
+  }
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   @include mixins.container;
