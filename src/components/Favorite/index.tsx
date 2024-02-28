@@ -1,13 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 import { assetsProject } from "../../utils/data";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
 import "./styles.scss";
 
 export default function Favorite() {
   useEffect(() => {
     window.onload = () => {
-      const swiperFavorite = new Swiper(".favorite__swiper", {
+      const swiperFavorite = new (window as any).Swiper(".favorite__swiper", {
         loop: true,
         slidesPerView: "auto",
         centeredSlides: true,
