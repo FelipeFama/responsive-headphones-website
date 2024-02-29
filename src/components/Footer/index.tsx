@@ -5,10 +5,18 @@ import {
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import "./styles.scss";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <motion.footer
+      className="footer"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+      variants={fadeIn("down", "tween", 0.4, 2.5)}
+    >
       <div className="footer__container container grid">
         <article>
           <a href="#" className="footer__logo">
@@ -110,6 +118,6 @@ export default function Footer() {
       <span className="footer__copy">
         &#169; All Rights Reserved By Yeison Serrano
       </span>
-    </footer>
+    </motion.footer>
   );
 }

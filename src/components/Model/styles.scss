@@ -9,7 +9,10 @@
     & .model__img {
       width: 280px;
       @media screen and (min-width: 340px) {
-        width: 220px;
+        width: 210px;
+      }
+      @media screen and (min-width: 768px) {
+        width: 250px;
       }
       @media screen and (min-width: 1150px) {
         width: 500px;
@@ -42,10 +45,13 @@
         top: 1rem;
         @media screen and (min-width: 340px) {
           top: 1.5rem;
-          right: 1.5rem;
+          right: 3.5rem;
           & .model__tooltip-text {
             left: 10rem;
           }
+        }
+        @media screen and (min-width: 768px) {
+          right: 1.5rem;
         }
         @media screen and (min-width: 1150px) {
           transform: initial;
