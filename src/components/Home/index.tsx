@@ -21,7 +21,7 @@ export default function Home() {
           <h1 className="home__title">
             <motion.span
               initial={{ opacity: 0, x: -60 }}
-              animate={{ opacity: 1, x: 10 }}
+              animate={{ opacity: 1, x: 1 }}
               transition={{ duration: 2.5, delay: 0.4 }}
             >
               J
@@ -29,24 +29,29 @@ export default function Home() {
             <span>B</span>
             <motion.span
               initial={{ opacity: 0, x: 60 }}
-              animate={{ opacity: 1, x: -10 }}
+              animate={{ opacity: 1, x: -1 }}
               transition={{ duration: 2.5, delay: 0.4 }}
             >
               L
             </motion.span>
           </h1>
-          <figure className="home__tooltip">
+          <motion.figure
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: -1 }}
+            transition={{ duration: 2.5, delay: 0.4 }}
+            className="home__tooltip"
+          >
             <img
               src={assetsProject.home.tooltip.tooltipImage.source}
               alt={assetsProject.home.tooltip.tooltipImage.alt}
               className="home__tooltip-img"
             />
             <span className="home__tooltip-text">$150</span>
-          </figure>
+          </motion.figure>
         </article>
         <motion.a
           initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: -60 }}
+          animate={{ opacity: 1, y: -1 }}
           transition={{ duration: 2.5, delay: 0.4 }}
           href="#"
           className="home__button button"
