@@ -6,6 +6,7 @@ import {
 import { RiPlayCircleFill } from "react-icons/ri";
 import { assetsProject } from "../../utils/data";
 import "./styles.scss";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -18,9 +19,21 @@ export default function Home() {
             className="home__img"
           />
           <h1 className="home__title">
-            <span>J</span>
+            <motion.span
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 10 }}
+              transition={{ duration: 2.5, delay: 0.4 }}
+            >
+              J
+            </motion.span>
             <span>B</span>
-            <span>L</span>
+            <motion.span
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: -10 }}
+              transition={{ duration: 2.5, delay: 0.4 }}
+            >
+              L
+            </motion.span>
           </h1>
           <figure className="home__tooltip">
             <img
@@ -31,10 +44,21 @@ export default function Home() {
             <span className="home__tooltip-text">$150</span>
           </figure>
         </article>
-        <a href="#" className="home__button button">
+        <motion.a
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: -60 }}
+          transition={{ duration: 2.5, delay: 0.4 }}
+          href="#"
+          className="home__button button"
+        >
           Buy Now <RiPlayCircleFill />
-        </a>
-        <article className="home__social">
+        </motion.a>
+        <motion.article
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 60 }}
+          transition={{ duration: 2.5, delay: 0.4 }}
+          className="home__social"
+        >
           <span className="home__social-text">Follow us</span>
           <aside className="home__social-links">
             <a
@@ -62,7 +86,7 @@ export default function Home() {
               <BiLogoLinkedinSquare />
             </a>
           </aside>
-        </article>
+        </motion.article>
       </div>
     </section>
   );
