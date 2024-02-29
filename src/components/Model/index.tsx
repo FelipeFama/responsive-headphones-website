@@ -1,10 +1,18 @@
 import "./styles.scss";
 import { assetsProject } from "../../utils/data";
 import { RiPlayCircleFill } from "react-icons/ri";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 export default function Model() {
   return (
-    <section className="model section" id="model">
+    <motion.section
+      className="model section"
+      id="model"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <h2 className="section__title">MODEL SPECIFICATIONS</h2>
       <div className="model__container container grid">
         <article className="model__content">
@@ -13,43 +21,59 @@ export default function Model() {
             alt={assetsProject.model.modelImage.alt}
             className="model__img"
           />
-          <aside className="model__tooltip model__tooltip-1">
+          <motion.aside
+            variants={fadeIn("right", "tween", 0.4, 2.5)}
+            className="model__tooltip model__tooltip-1"
+          >
             <img
               src={assetsProject.home.tooltip.tooltipImage.source}
               alt={assetsProject.home.tooltip.tooltipImage.alt}
               className="model__tooltip-img"
             />
             <span className="model__tooltip-text">Best Comfort</span>
-          </aside>
-          <aside className="model__tooltip model__tooltip-2">
+          </motion.aside>
+          <motion.aside
+            variants={fadeIn("left", "tween", 0.4, 2.5)}
+            className="model__tooltip model__tooltip-2"
+          >
             <img
               src={assetsProject.home.tooltip.tooltipImage.source}
               alt={assetsProject.home.tooltip.tooltipImage.alt}
               className="model__tooltip-img"
             />
             <span className="model__tooltip-text">Easy Adjustment</span>
-          </aside>
-          <aside className="model__tooltip model__tooltip-3">
+          </motion.aside>
+          <motion.aside
+            variants={fadeIn("right", "tween", 0.4, 2.5)}
+            className="model__tooltip model__tooltip-3"
+          >
             <img
               src={assetsProject.home.tooltip.tooltipImage.source}
               alt={assetsProject.home.tooltip.tooltipImage.alt}
               className="model__tooltip-img"
             />
             <span className="model__tooltip-text">Fast Charge</span>
-          </aside>
-          <aside className="model__tooltip model__tooltip-4">
+          </motion.aside>
+          <motion.aside
+            variants={fadeIn("left", "tween", 0.4, 2.5)}
+            className="model__tooltip model__tooltip-4"
+          >
             <img
               src={assetsProject.home.tooltip.tooltipImage.source}
               alt={assetsProject.home.tooltip.tooltipImage.alt}
               className="model__tooltip-img"
             />
             <span className="model__tooltip-text">Custom Audio</span>
-          </aside>
+          </motion.aside>
         </article>
-        <a href="#" className="model__button button">
+        <motion.a
+          variants={fadeIn("up", "tween", 0.4, 2.5)}
+          href="#"
+          className="model__button button"
+        >
           Buy Now <RiPlayCircleFill />
-        </a>
+        </motion.a>
       </div>
-    </section>
+    </motion.section>
   );
 }

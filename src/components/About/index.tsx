@@ -2,15 +2,20 @@ import { assetsProject } from "../../utils/data";
 import { BiSolidInfoCircle } from "react-icons/bi";
 import "./styles.scss";
 import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 export default function About() {
   return (
-    <section className="about section" id="about">
+    <motion.section
+      className="about section"
+      id="about"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="about__container container grid">
         <motion.article
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 1 }}
-          transition={{ duration: 2.5, delay: 0.4 }}
+          variants={fadeIn("right", "tween", 0.4, 2.5)}
           className="about__data"
         >
           <aside className="section__title">MORE ABOUT US</aside>
@@ -25,14 +30,12 @@ export default function About() {
         </motion.article>
 
         <motion.img
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: -1 }}
-          transition={{ duration: 2.5, delay: 0.4 }}
+          variants={fadeIn("left", "tween", 0.4, 2.5)}
           src={assetsProject.about.img.source}
           alt={assetsProject.about.img.alt}
           className="about__img"
         />
       </div>
-    </section>
+    </motion.section>
   );
 }

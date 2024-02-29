@@ -7,10 +7,17 @@ import { RiPlayCircleFill } from "react-icons/ri";
 import { assetsProject } from "../../utils/data";
 import "./styles.scss";
 import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 export default function Home() {
   return (
-    <section className="home section" id="home">
+    <motion.section
+      className="home section"
+      id="home"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="home__container container grid">
         <article className="home__content">
           <img
@@ -19,26 +26,16 @@ export default function Home() {
             className="home__img"
           />
           <h1 className="home__title">
-            <motion.span
-              initial={{ opacity: 0, x: -60 }}
-              animate={{ opacity: 1, x: 1 }}
-              transition={{ duration: 2.5, delay: 0.4 }}
-            >
+            <motion.span variants={fadeIn("right", "tween", 0.4, 2.5)}>
               J
             </motion.span>
             <span>B</span>
-            <motion.span
-              initial={{ opacity: 0, x: 60 }}
-              animate={{ opacity: 1, x: -1 }}
-              transition={{ duration: 2.5, delay: 0.4 }}
-            >
+            <motion.span variants={fadeIn("left", "tween", 0.4, 2.5)}>
               L
             </motion.span>
           </h1>
           <motion.figure
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: -1 }}
-            transition={{ duration: 2.5, delay: 0.4 }}
+            variants={fadeIn("up", "tween", 0.4, 2.5)}
             className="home__tooltip"
           >
             <img
@@ -50,18 +47,14 @@ export default function Home() {
           </motion.figure>
         </article>
         <motion.a
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: -1 }}
-          transition={{ duration: 2.5, delay: 0.4 }}
+          variants={fadeIn("up", "tween", 0.4, 2.5)}
           href="#"
           className="home__button button"
         >
           Buy Now <RiPlayCircleFill />
         </motion.a>
         <motion.article
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 60 }}
-          transition={{ duration: 2.5, delay: 0.4 }}
+          variants={fadeIn("down", "tween", 0.4, 2.5)}
           className="home__social"
         >
           <span className="home__social-text">Follow us</span>
@@ -93,6 +86,6 @@ export default function Home() {
           </aside>
         </motion.article>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { assetsProject } from "../../utils/data";
 import "./styles.scss";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 export default function Favorite() {
   useEffect(() => {
@@ -24,9 +26,18 @@ export default function Favorite() {
   }, []);
 
   return (
-    <section className="favorite section" id="favorite">
+    <motion.section
+      className="favorite section"
+      id="favorite"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <h2 className="section__title">CHOOSE YOUR FAVORITE</h2>
-      <article className="favorite__container">
+      <motion.article
+        variants={fadeIn("down", "tween", 0.4, 2.5)}
+        className="favorite__container"
+      >
         <div className="favorite__swiper swiper">
           <aside className="swiper-wrapper">
             <article className="favorite__article swiper-slide">
@@ -63,7 +74,7 @@ export default function Favorite() {
             </article>
           </aside>
         </div>
-      </article>
-    </section>
+      </motion.article>
+    </motion.section>
   );
 }

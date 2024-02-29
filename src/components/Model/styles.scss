@@ -20,9 +20,18 @@
       &.model__tooltip-1 {
         top: 5.5rem;
         left: 5rem;
+        & img {
+          transform: scaleX(1);
+          @media screen and (min-width: 340px) {
+            transform: scaleX(-1);
+          }
+        }
         @media screen and (min-width: 340px) {
           top: 3rem;
           left: 4rem;
+          & .model__tooltip-text {
+            transform: translate(-102px, -40px);
+          }
         }
         @media screen and (min-width: 1150px) {
           top: 7.5rem;
@@ -31,27 +40,41 @@
       }
       &.model__tooltip-2 {
         top: 1rem;
-        right: 1.5rem;
         @media screen and (min-width: 340px) {
-          top: 0;
+          top: 1.5rem;
+          right: 1.5rem;
+          & .model__tooltip-text {
+            left: 10rem;
+          }
         }
         @media screen and (min-width: 1150px) {
-          transform: initial !important;
+          transform: initial;
           top: 6.5rem;
           right: -1.5rem;
+          & img {
+            transform: scaleX(1);
+          }
         }
       }
       &.model__tooltip-3 {
         bottom: 1.8rem;
         left: 3.5rem;
+        & img {
+          transform: scaleX(-1);
+        }
         @media screen and (min-width: 340px) {
           bottom: 2rem;
           left: 3rem;
+          & .model__tooltip-text {
+            left: -9.5rem;
+          }
         }
         @media screen and (min-width: 1150px) {
-          transform: scaleX(-1);
           left: 0;
           bottom: 6rem;
+          & .model__tooltip-text {
+            left: 0;
+          }
         }
       }
       &.model__tooltip-4 {
@@ -74,22 +97,22 @@
       &.model__tooltip-2 .model__tooltip-text {
         transform: translate(60px, -40px) scaleX(-1);
         @media screen and (min-width: 340px) {
-          transform: translate(40px, -40px) scaleX(-1);
+          transform: translate(-102px, -40px) scaleX(1);
         }
       }
       @media screen and (min-width: 1150px) {
         &.model__tooltip-1 .model__tooltip-text {
-          transform: translate(82px, -56px) scaleX(-1);
+          transform: translate(-136px, -56px) scaleX(1);
         }
       }
       @media screen and (min-width: 1150px) {
         &.model__tooltip-2 .model__tooltip-text {
-          transform: translate(82px, -56px);
+          transform: translate(-77px, -56px);
         }
       }
       @media screen and (min-width: 1150px) {
         &.model__tooltip-3 .model__tooltip-text {
-          transform: translate(82px, -56px) scaleX(-1);
+          transform: translate(-136px, -56px) scaleX(1);
         }
       }
       & .model__tooltip-img {
@@ -110,7 +133,6 @@
         white-space: nowrap;
         @media screen and (min-width: 340px) {
           font-size: $smaller-font-size;
-          transform: translate(42px, -40px);
         }
         @media screen and (min-width: 1150px) {
           font-size: $normal-font-size-lg;
