@@ -1,6 +1,16 @@
 /*=============== MIXINS ===============*/
 @import "variables";
 
+@mixin body {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  background-color: $body-color;
+  color: $text-color;
+  @media screen and (min-width: 1150px) {
+    font-size: $normal-font-size-lg;
+  }
+}
+
 @mixin container {
   max-width: 1120px;
   margin-inline: 1.5rem;
