@@ -15,8 +15,6 @@
 
 ## :rocket: Run Project
 
-### Front 
-
 ```bash
 bun install
 bun run dev
